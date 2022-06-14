@@ -1,0 +1,6 @@
+
+ # lib/header.h
+
+	Plik nagłówkowy zawierający wartości wykorzystywanych
+	przez procesy stałych oraz funkcji.
+

@@ -1,0 +1,6 @@
+
+ # lib/p3.c
+
+	Plik z kodem źródłowy wykonywanym
+	przez proces trzeci.
+

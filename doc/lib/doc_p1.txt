@@ -1,0 +1,6 @@
+
+ # lib/p1.c
+
+	Plik z kodem źródłowy wykonywanym
+	przez proces pierwszy.
+

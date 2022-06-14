@@ -1,0 +1,6 @@
+
+ # lib/main.c
+
+	Plik z kodem źródłowy wykonywanym
+	przez proces główny.
+
