@@ -1,16 +1,34 @@
-# C-project
+# C-project - pipe, shared memory
 
+
+## Opis [^desc]
 Zestaw programów typu 'producent', 'konsument' prezentujący
 możliwości synchronizacji i współbieżnego działania kilku
 procesów zdolnych do obróbki i przekazywania sobie danych.
-
+___
 **System operacyjny:** *Linux*
 
 **Język:** *C*
 
-**Autor:** *Baro-coder*
+**Mechanizmy synchronizacji**: 
+  - *łącza nienazwane (pipe),* 
+  - *pamięć współdzielona (shmem).*
 
-## Procesy
+
+## Uruchomienie projektu: [^run] 
+Wywołanie głównego skryptu bash: *project.sh*
+
+> ./project.sh
+
+Skrypt samodzielnie przeprowadzi kompilację wszystkich
+plików źródłowych *.c* i w przypadku nie wystąpienia
+błędów kompilacji uruchomi zestaw programów.
+
+W przypadku wystąpienia błędów kompilacji skrypt wyświetli
+zidentyfikowane błędy i zakończy działanie.
+
+
+## Procesy [^proc]
 
 ### Proces główny - MAIN
   Z procesu głównego powoływane są 3 procesy potomne.
@@ -32,7 +50,7 @@ procesów zdolnych do obróbki i przekazywania sobie danych.
   Odczytuje dane z segmentu pamięci współdzielonej i wypisuje je 
   na *stderr* (standardowy strumień diagnostyczny).
 
-## Sygnały
+## Sygnały [^sig]
   Operator może wysłać do dowolnego procesu następujące sygnały:
     - SIGINT  - zakończenie działania,
     - SIGUSR1 - wstrzymanie działania,
@@ -41,4 +59,8 @@ procesów zdolnych do obróbki i przekazywania sobie danych.
   Proces odbierający  sygnał  musi powiadomić pozostałe procesy
   o otrzymanym sygnale.  Wówczas wszystkie procesy realizują
   odpowiednie operacje będące interpretacją odebranego sygnału.
-  
+
+[^desc]: Opis
+[^run]: Uruchomienie projektu
+[^proc]: Procesy
+[^sig]: Sygnały
