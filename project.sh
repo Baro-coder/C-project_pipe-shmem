@@ -20,8 +20,7 @@ fi
 echo "-------------------------------------------------"
 echo
 
-echo "Running the project..."
-echo 
-echo 
+echo "Running the project: lib/main.out..."
+echo "-----------------------"
 
 ./bin/run.sh

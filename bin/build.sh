@@ -10,7 +10,7 @@ COMPILE()
     file_out=${dir_var}${file##*/}
     file_out="${file_out%.c}.out"
 
-    echo "  Compiling: $1 into $file_out ..."
+    echo "  Compiling: $1 ..."
     echo
 
     gcc -o "$file_out" "$file"
