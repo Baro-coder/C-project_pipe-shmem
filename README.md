@@ -16,8 +16,11 @@ ___
 
 
 ## Uruchomienie projektu: [^run] 
-Wywołanie głównego skryptu bash: *project.sh*
 
+Przejście do katalogu projektu:
+> cd *existing project folder*
+
+Wywołanie głównego skryptu bash: *project.sh*:
 > ./project.sh
 
 Skrypt samodzielnie przeprowadzi kompilację wszystkich
