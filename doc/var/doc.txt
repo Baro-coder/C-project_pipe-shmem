@@ -1,0 +1,10 @@
+
+ Katalog var/ zawiera wszystkie wykonywalne
+ pliki .out powstałe w wyniku kompilacji
+ plików źródłowych .c z katalogu lib/ .
+
+ Ponadto katalog var/ wykorzystywany jest
+ podczas pracy programu do przechowywania
+ plików tymczasowych oraz kluczy IPC.
+
+

@@ -1,0 +1,9 @@
+
+ Katalog doc/ zawiera opis wszystkich katalogów
+ projektu oraz przeznaczenie plików w nich 
+ znajdujących się.
+
+ # Katalog główny zawiera główny skrypt
+    uruchomieniowy projektu: project.sh
+    oraz plik informacyjny README.md
+

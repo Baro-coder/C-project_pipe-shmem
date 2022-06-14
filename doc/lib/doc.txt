@@ -1,0 +1,5 @@
+
+ Katalog lib/ zawiera wszystkie pliki źródłowe .c
+ oraz niestandardowe pliki nagłówkowe .h .
+ 
+ 

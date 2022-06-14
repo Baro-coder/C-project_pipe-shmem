@@ -1,0 +1,22 @@
+
+ Katalog bin/ zawiera wykonywalne skrypty Bash
+ służące do obsługi uruchomieniowej projektu.
+
+ # bin/build.sh:
+	
+	Kompiluje wszystkie pliki źródłowe .c
+	z katalogu lib/ oraz tworzy wykonywalne
+	pliki .out w katalogu var/ .
+	
+	W przypadku stwierdzenia błędów kompilacji
+	wyświetla napotkane problemy oraz zwraca
+	wartość 1.
+
+	W przypadku pomyślnej kompilacji wszystkich
+	plików źródłowych zwraca wartość 0.
+
+ # bin/run.sh:
+
+	Uruchamia główny plik wykonywalny main.out
+	z katalogu var/ .
+
