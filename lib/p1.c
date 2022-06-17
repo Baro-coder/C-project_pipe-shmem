@@ -107,14 +107,17 @@ void menu()
     printf(" > ");
     scanf("%c", &opt);
 
-    if(opt == '1'){
-        manual();
-    }
-    else if(opt == '2'){
-        file();
-    }
-    else{
-        printf("Choose valid option!\n\n");
+    if(running)
+    {
+        if(opt == '1'){
+            manual();
+        }
+        else if(opt == '2'){
+            file();
+        }
+        else{
+            printf("Choose valid option!\n\n");
+        }
     }
 }
 
@@ -128,14 +131,17 @@ void manual()
         printf(" > ");
         fgets(buffer, sizeof(buffer), stdin);
 
-        if(strncmp(buffer, "exit\n", 5) == 0)
+        if(running)
         {
-            free(buffer);
-            break;
-        }
+            if(strncmp(buffer, "exit\n", 5) == 0)
+            {
+                free(buffer);
+                break;
+            }
 
-        write(pipe_fd[WRITE], buffer, strlen(buffer));
-        memset(buffer, 0, BUFFSIZE);
+            write(pipe_fd[WRITE], buffer, strlen(buffer));
+            memset(buffer, 0, BUFFSIZE);
+        }
     }
 }
 
@@ -158,9 +164,12 @@ void file()
 
         while(1)
         {
-            if(fgets(buffer, sizeof(buffer), fp) == NULL) break;
-            write(pipe_fd[WRITE], buffer, strlen(buffer));
-            memset(buffer, 0, BUFFSIZE);
+            if(running)
+            {
+                if(fgets(buffer, sizeof(buffer), fp) == NULL) break;
+                write(pipe_fd[WRITE], buffer, strlen(buffer));
+                memset(buffer, 0, BUFFSIZE);
+            }
         }
 
         free(buffer);
