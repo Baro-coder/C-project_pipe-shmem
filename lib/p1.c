@@ -79,7 +79,7 @@ void sigHandler(int signo)
     }
     else if(signo == SIGUSR1)
     {
-        running = 1;
+        running = 0;
     }
     else if(signo == SIGUSR2)
     {
