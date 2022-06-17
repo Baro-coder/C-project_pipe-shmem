@@ -13,7 +13,7 @@ COMPILE()
     echo "  Compiling: $1 ..."
     echo
 
-    gcc -o "$file_out" "$file"
+    gcc -o "$file_out" "$file" -pthread
 
     if [ $? -eq 0 ]; then
         echo "      Compiled successfully."
